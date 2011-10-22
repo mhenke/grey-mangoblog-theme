@@ -3,35 +3,7 @@
 <cfimport prefix="template" taglib=".">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head profile="http://gmpg.org/xfn/11">
-<mango:Page>
-	<meta http-equiv="Content-Type" content="text/html; charset=<mango:Blog charset />" />
-	<title><mango:PageProperty title /> &#8212; <mango:Blog title /></title>
-	
-	<meta name="generator" content="Mango <mango:Blog version />" />
-	<mango:PageProperty ifHasCustomField='meta-description'>
-		<meta name="description" content="<mango:PageProperty customfield='meta-description' />" />
-	</mango:PageProperty>
-	<mango:PageProperty ifNotHasCustomField='meta-description'>
-		<meta name="description" content="<mango:Blog description />" />
-	</mango:PageProperty>
-	
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/styles/style.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<mango:Blog skinurl />assets/styles/custom.css" type="text/css" media="screen" />
-	<!--[if lte IE 7]>
-	<link rel="stylesheet" type="text/css" href="<mango:Blog skinurl />assets/styles/ie7.css" media="screen" />
-	<![endif]-->
-	<!--[if lte IE 6]>
-	<link rel="stylesheet" type="text/css" href="<mango:Blog skinurl />assets/styles/ie6.css" media="screen" />
-	<![endif]-->
-	
-	<meta name="robots" content="index, follow" />
-
-	<link rel="alternate" type="application/atom+xml" title="Atom" href="<mango:Blog atomurl />" />
-	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<mango:Blog rssurl />" />	
-	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<mango:Blog apiurl />" />
-	<mango:Event name="beforeHtmlHeadEnd" />
-</head>
+<template:headerhtml />
 <body class="custom">
 <mango:Event name="beforeHtmlBodyStart" />
 <div id="container">

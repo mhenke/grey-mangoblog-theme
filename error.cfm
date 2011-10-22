@@ -3,20 +3,7 @@
 <cfimport prefix="template" taglib=".">
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head profile="http://gmpg.org/xfn/11">
-	<title><mango:Message title /> &#8212; Error</title>
-	
-	<link rel="stylesheet" href="skins/grey/assets/styles/style.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="skins/grey/assets/styles/custom.css" type="text/css" media="screen" />
-	<!--[if lte IE 7]>
-	<link rel="stylesheet" type="text/css" href="skins/grey/assets/styles/ie7.css" media="screen" />
-	<![endif]-->
-	<!--[if lte IE 6]>
-	<link rel="stylesheet" type="text/css" href="skins/grey/assets/styles/ie6.css" media="screen" />
-	<![endif]-->
-	
-	<meta name="robots" content="noindex, nofollow" />
-</head>
+<template:headerhtml />
 <body class="custom">
 <div id="container">
 
