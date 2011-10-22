@@ -13,19 +13,16 @@
 				<section id="posts" class="prefix_1 grid_9">
 					<mango:Posts count="10">
 						<mango:Post>
-							<article id="post-<mango:PostProperty id />"><template:article /></article>
+							<article id="post-<mango:PostProperty id />"><template:article />
 							<p>
 								<img width="510" height="150" src="http://webexpedition18.com/grey/wp-content/uploads/2010/12/caffee-break-final-510x150.jpg" class="teasier wp-post-image" alt="caffee-break-final" title="caffee-break-final" />
 							</p>
 							<div class="entry">
 								<mango:PostProperty ifhasExcerpt excerpt>
-									<a href="<mango:PostProperty link />" title="Read the rest of this entry">[Read more &rarr;]</a>
+									<p>
+									<a href="<mango:PostProperty link />" title="Read the rest of this entry" class="more-link">Read full story</a>
 									</p> 
 								</mango:PostProperty>
-								<mango:PostProperty ifNotHasExcerpt body />
-								<p>
-									<a href="<mango:PostProperty link />" class="more-link">Read full story</a>
-								</p>
 							</div>
 							<div class="clear"></div>
 							<p class="bottom_info">
@@ -42,7 +39,7 @@
 									</a>
 								</mango:PostProperty>
 							</p>
-							<article>
+							</article>
 						</mango:Post>
 					</mango:Posts>
 					<mango:Archive pageSize="10">
