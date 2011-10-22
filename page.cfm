@@ -137,31 +137,12 @@
 							<!-- Close #comments container -->
 							<div class="clear"></div>
 						</article>
-					</section>
-					<div id="sidebar">
-						<ul class="sidebar_list">
-							<mangox:PodGroup locationId="sidebar-page" template="page">
-								<mangox:TemplatePod id="page-menu" title="Page Menu"><template:pageMenu /></mangox:TemplatePod>
-								<template:sidebar />
-							</mangox:PodGroup>
-						</ul>
-					</div>
-				</div></div>
-				<div id="footer">
-					<mango:Event name="afterFooterStart" />
-					<p>
-						<mango:Blog title />
-						&mdash; 
-						<a href="http://www.mangoblog.org" title="Mango Blog - A ColdFusion blog engine">Powered by Mango Blog</a>
-						&mdash; Design by 
-						<a href="http://www.tubetorial.com">Chris Pearson</a>
-						ported by 
-						<a href="http://www.asfusion.com">AsFusion</a>
-					</p>
-					<mango:Event name="beforeFooterEnd" />
-				</div>
-			</div>
-			<mango:Event name="beforeHtmlBodyEnd" />
-	</mango:Page>
-	</body> 
+					</section></mango:Page>
+								<mangox:PodGroup locationId="sidebar" template="post"><template:sidebar /></mangox:PodGroup>
+		</div>
+		<!-- footer -->
+		<template:footer />
+			<mango:Event name="beforeFooterEnd" />
+		<mango:Event name="beforeHtmlBodyEnd" />
+	</body>
 </html>
