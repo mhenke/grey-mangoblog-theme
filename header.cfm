@@ -22,9 +22,7 @@
 								</li>
 							</mango:Page>
 						</mango:Pages>
-						<li id="menu-rss" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-rss"><a href="<mango:Blog rssurl />">
-								RSS 
-							</a></li>
+						<!--- <li id="menu-rss" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-rss"><a href="<mango:Blog rssurl />">RSS</a></li> --->
 					</ul>
 				</nav>
 			</div>
