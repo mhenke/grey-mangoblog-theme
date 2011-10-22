@@ -136,8 +136,8 @@
 							</div>
 							<!-- Close #comments container -->
 							<div class="clear"></div>
-						</article>
-					</section></mango:Page>
+						</article> </section>
+</mango:Page>
 								<mangox:PodGroup locationId="sidebar" template="post"><template:sidebar /></mangox:PodGroup>
 		</div>
 		<!-- footer -->

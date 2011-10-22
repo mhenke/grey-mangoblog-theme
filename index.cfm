@@ -17,28 +17,7 @@
 							<p>
 								<img width="510" height="150" src="http://webexpedition18.com/grey/wp-content/uploads/2010/12/caffee-break-final-510x150.jpg" class="teasier wp-post-image" alt="caffee-break-final" title="caffee-break-final" />
 							</p>
-							<div class="entry">
-								<mango:PostProperty ifhasExcerpt excerpt>
-									<p>
-									<a href="<mango:PostProperty link />" title="Read the rest of this entry" class="more-link">Read full story</a>
-									</p> 
-								</mango:PostProperty>
-							</div>
-							<div class="clear"></div>
-							<p class="bottom_info">
-								<mango:PostProperty ifcommentsallowed>
-									&rarr; 
-									<a href="<mango:PostProperty link />#respond" title="Comment on <mango:PostProperty title />">
-										<mango:PostProperty ifCommentCountGT="0">
-											<mango:PostProperty commentCount />
-											Comment 
-											<mango:PostProperty ifCommentCountGT="1">s</mango:PostProperty>
-											&#187; 
-										</mango:PostProperty>
-										<mango:PostProperty ifCommentCountLT="1">No Comments</mango:PostProperty>
-									</a>
-								</mango:PostProperty>
-							</p>
+									<template:readmore />
 							</article>
 						</mango:Post>
 					</mango:Posts>
