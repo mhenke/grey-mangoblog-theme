@@ -1,6 +1,8 @@
+<cfsilent>
 <cfimport prefix="mango" taglib="../../tags/mango" />
 <cfimport prefix="mangox" taglib="../../tags/mangoextras" />
 <cfimport prefix="template" taglib="." />
+</cfsilent>
 <cfif thisTag.executionMode EQ "start">
 	<h2>
 		<a href="<mango:PostProperty link />" rel="bookmark" title="Permanent Link to <mango:PostProperty title />"><mango:PostProperty title /></a>

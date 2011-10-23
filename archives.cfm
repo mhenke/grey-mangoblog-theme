@@ -1,6 +1,8 @@
-<cfimport prefix="mango" taglib="../../tags/mango" />
-<cfimport prefix="mangox" taglib="../../tags/mangoextras" />
-<cfimport prefix="template" taglib="." />
+<cfsilent>
+	<cfimport prefix="mango" taglib="../../tags/mango" />
+	<cfimport prefix="mangox" taglib="../../tags/mangoextras" />
+	<cfimport prefix="template" taglib="." />
+</cfsilent>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<template:headerhtml />
@@ -60,32 +62,28 @@
 								<mango:Post>
 									<article id="post-<mango:PostProperty id />">
 										<template:article />
-										<p>
-											<img width="510" height="150" src="http://webexpedition18.com/grey/wp-content/uploads/2010/12/caffee-break-final-510x150.jpg" class="teasier wp-post-image" alt="caffee-break-final" title="caffee-break-final" />
-										</p>
+										<div class="entry">
+											<mango:PostProperty ifhasExcerpt excerpt />
+											<mango:PostProperty ifNotHasExcerpt body />
+										</div>
+										<div class="clear"></div>
 										<template:readmore />
 									</article>
-									<mango:Categories>
-										<mango:Category>
-											<a href="<mango:CategoryProperty link />" title="View all posts in  <mango:CategoryProperty title />" rel="category tag"><mango:CategoryProperty title /></a>
-											<mango:Category ifCurrentIsNotLast>&middot;</mango:Category>
-										</mango:Category>
-									</mango:Categories>
 								</mango:Post>
 							</mango:Posts>
 							<div class="navigation">
 								<div class="previous">
 									<mango:ArchiveProperty ifHasNextPage>
-										<a href=" 
+										<a class="alignleft" href=" 
 										<mango:ArchiveProperty link pageDifference="1" />
-										">&larr; Previous Entries</a> 
+										">Older Posts</a> 
 									</mango:ArchiveProperty>
 								</div>
 								<div class="next">
 									<mango:ArchiveProperty ifHasPreviousPage>
-										<a href=" 
+										<a class="alignright" href=" 
 										<mango:ArchiveProperty link pageDifference="-1" />
-										">Next Entries &rarr;</a> 
+										">Newer Posts</a> 
 									</mango:ArchiveProperty>
 								</div>
 							</div>
