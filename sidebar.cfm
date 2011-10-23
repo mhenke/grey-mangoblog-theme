@@ -5,10 +5,12 @@
 </cfsilent>
 <cfif thisTag.executionMode EQ "start">
 	<aside class="prefix_1 grid_5">
+		<!--- 
 		<!-- search -->
 		<form action="http://webexpedition18.com/grey" method="get"><input type="text" id="search" name="s" value="I'm searching for..." /></form>
 		<div class="clear"></div>
-		<hr />
+		<hr /> 
+		--->
 		<!-- RSS / Twitter -->
 		<section id="rss">
 			<!--- <p>

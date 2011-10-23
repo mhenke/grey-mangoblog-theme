@@ -17,7 +17,6 @@
 		<link rel="alternate" type="application/atom+xml" title="Atom" href="<mango:Blog atomurl />" />
 		<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<mango:Blog apiurl />" />
 		<link rel="shortcut icon" href="<mango:Blog skinurl />assets/images/favicon.ico"/>
-		<script type="text/javascript" src="<mango:Blog skinurl />assets/js/jquery.main.js"></script> 
 		<mango:Event name="beforeHtmlHeadEnd" />
 	</head>
 </cfif>
