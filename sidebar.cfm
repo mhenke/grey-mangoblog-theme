@@ -112,7 +112,7 @@
 			<mango:Comments recent count="8">
 				<mango:Comment>
 					<li>
-						<mango:CommentProperty excerptChars="20" />
+						<mango:CommentProperty excerptChars="55" />
 						<br />
 						<a href="<mango:CommentProperty entryLink />#comment-<mango:CommentProperty id />" title="on <mango:CommentProperty entryTitle />"><mango:CommentProperty name /></a>
 					</li>
