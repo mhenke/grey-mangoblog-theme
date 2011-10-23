@@ -15,9 +15,9 @@
 						<li>
 							<a class="current" href="<mango:Blog basePath />">home</a>
 						</li>
-						<mango:Pages>
+						<mango:Pages parentPage="">
 							<mango:Page>
-								<li id="menu-item-<mango:PageProperty id>" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-<mango:PageProperty id>">
+								<li id="menu-item-<mango:PageProperty id>" class="menu-item menu-item-type-post_type current-menu-item current_page_item menu-item-object-page menu-item-<mango:PageProperty id>">
 									<a href="<mango:PageProperty link>" title="<mango:PageProperty title />"><mango:PageProperty title /></a>
 								</li>
 							</mango:Page>

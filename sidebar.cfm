@@ -3,142 +3,116 @@
 <cfimport prefix="template" taglib="." />
 <cfif thisTag.executionMode EQ "start">
 	<aside class="prefix_1 grid_5">
-		php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : 
 		<!-- search -->
-		php get_search_form(); 
+		<form action="http://webexpedition18.com/grey" method="get"><input type="text" id="search" name="s" value="I'm searching for..." /></form>
+					<div class="clear"></div>
+			<hr />
+			<!-- RSS / Twitter -->
+			<section id="rss">
+				<!--- <p>
+					<a href="http://webexpedition18.com/grey/?feed=rss2">
+						<img src="http://webexpedition18.com/grey/wp-content/themes/grey/images/socials/rss_32.png" alt="Subscribe Feed" />
+					</a>
+				</p>
+				<p>
+					<a href="http://webexpedition18.com/grey/?feed=rss2">SUBSCRIBE</a>
+					<br />
+					<strong>1528</strong>
+					readers 
+				</p> --->
+				<p class="rss_sub_links">
+					<a href="http://webexpedition18.com/grey/?feed=rss2">rss feed</a>
+					| 
+					<a href="http://feedburner.google.com/fb/a/mailverify?uri=webexpedition18com&amp;loc=en_US">email updates</a>
+				</p>
+			</section>
+			<section id="twitter">
+				<!--- 			
+				<p>
+					<a href="http://twitter.com/colaja">
+						<img src="http://webexpedition18.com/grey/wp-content/themes/grey/images/socials/twitter_32.png" alt="Follow on Twitter" />
+					</a>
+				</p>
+				<p>
+					<a href="http://twitter.com/mikehenke" class="twitter-follow-button">FOLLOW ME</a>
+				</p> 
+				--->
+				<p>
+					<a href="http://twitter.com/coldfusionshow" class="twitter-follow-button">Follow @coldfusionshow</a>
+					<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script> 
+				</p>
+			</section>
+			<div class="clear"></div>
+			<hr />
+			<!-- Comments -->
+			<h4>Recent Comments</h4>
+			<ul class='recent_comments'>
+				<mango:Comments recent count="8">
+					<mango:Comment>
+						<li>
+							<mango:CommentProperty excerptChars="20" />
+							<br />
+							<a href="<mango:CommentProperty entryLink />#comment-<mango:CommentProperty id />" title="on <mango:CommentProperty entryTitle />"><mango:CommentProperty name /></a>
+						</li>
+					</mango:Comment>
+				</mango:Comments>
+			</ul>
+			<div class="clear"></div>
+			<hr />
+			<!---
+			<h4>Categories</h4>
+			<ul class="categories">
+			<li class="cat-item cat-item-6">
+			<a href="http://webexpedition18.com/grey/?cat=6" title="View all posts filed under design">design</a>
+			</li>
+			<li class="cat-item cat-item-8">
+			<a href="http://webexpedition18.com/grey/?cat=8" title="View all posts filed under inspiration">inspiration</a>
+			</li>
+			<li class="cat-item cat-item-7">
+			<a href="http://webexpedition18.com/grey/?cat=7" title="View all posts filed under tutorials">tutorials</a>
+			</li>
+			<li class="cat-item cat-item-1">
+			<a href="http://webexpedition18.com/grey/?cat=1" title="View all posts filed under uncategorized">uncategorized</a>
+			</li>
+			<li class="cat-item cat-item-10">
+			<a href="http://webexpedition18.com/grey/?cat=10" title="View all posts filed under updates">updates</a>
+			</li>
+			<li class="cat-item cat-item-9">
+			<a href="http://webexpedition18.com/grey/?cat=9" title="View all posts filed under web">web</a>
+			</li>
+			</ul>
+			--->
+			
 		<!-- Categories-->
-		<h4>Categories</h4>
-		<ul class="categories">php wp_list_categories('title_li=');</ul>
-		<div class="clear"></div>
-		<hr />
-		<!-- RSS / Twitter -->
-		<section id="rss">
-			<p>
-				<a href="php bloginfo('rss2_url'); ">
-					<img src="<mango:Blog skinurl />assets/images/socials/rss_32.png" alt="Subscribe Feed" />
-				</a>
-			</p>
-			<p>
-				<a href="php bloginfo('rss2_url'); ">SUBSCRIBE</a>
-				<br />
-				<strong>
-					php $socials = get_option('grey_socials'); echo grey_feeds_count( $socials['feedburner'] ); 
-				</strong>
-				readers
-			</p>
-			<p class="rss_sub_links">
-				<a href="php bloginfo('rss2_url'); ">rss feed</a>
-				php if( $socials['feedburner'] ) : | 
-				<a href="http://feedburner.google.com/fb/a/mailverify?uri=php echo $socials['feedburner']; &amp;loc=en_US">email updates</a>
-				php endif; 
-			</p>
-		</section>
-		<section id="twitter">
-			<p>
-				<a href="http://twitter.com/php echo $socials['twitter']; ">
-					<img src="<mango:Blog skinurl />assets/images/socials/twitter_32.png" alt="Follow on Twitter" />
-				</a>
-			</p>
-			<p>
-				<a href="http://twitter.com/php echo $socials['twitter']; ">FOLLOW ME</a>
-				<br />
-				<strong>php echo grey_twitter_count( $socials['twitter'] );</strong>
-				followers
-			</p>
-		</section>
 		
-		
-		<!--- twitterFollow --->
-	<mangox:TemplatePod id="twitterFollow" title="twitter Follow">
-	<ul>
-	<mango:Categories>
-		<mango:Category>
-		<li><a href="<mango:CategoryProperty rssurl />" class="category_rss"><img src="<mango:Blog skinurl />assets/images/icon_rss.gif"></a> <a href="<mango:CategoryProperty link />" title="<mango:CategoryProperty title />"><mango:CategoryProperty title /></a> </li>
-		</mango:Category>
-	</mango:Categories>
-	</ul>
-	</mangox:TemplatePod>
-	
-	<!--- categories with RSS --->
-	<mangox:TemplatePod id="categories" title="Categories">
-	<ul>
-	<mango:Categories>
-		<mango:Category>
-		<li><a href="<mango:CategoryProperty rssurl />" class="category_rss"><img src="<mango:Blog skinurl />assets/images/icon_rss.gif"></a> <a href="<mango:CategoryProperty link />" title="<mango:CategoryProperty title />"><mango:CategoryProperty title /></a> </li>
-		</mango:Category>
-	</mango:Categories>
-	</ul>
-	</mangox:TemplatePod>
-	
-	<!--- search box --->
-	<mangox:TemplatePod id="search" title="Search It!">
-	<form name="searchForm" id="search_form" method="get" action="<mango:Blog searchUrl />">
-		<input type="text" class="search_input" name="term" value="To search, type and hit enter" id="term" onfocus="if (this.value == 'To search, type and hit enter') {this.value = '';}" onblur="if (this.value == '') {this.value = 'To search, type and hit enter';}" />
-		<input type="hidden" id="searchsubmit" value="Search" />
-	</form>
-	</mangox:TemplatePod>
-
-	<!--- category cloud --->
-	<mangox:TemplatePod id="category-cloud" title="Tag Cloud">
-		<mangox:CategoryCloud />
-	</mangox:TemplatePod>
-	
-	<!--- all archives by month --->
-	<mangox:TemplatePod id="monthly-archives" title="Monthly Archives">
-		<ul><mango:Archives type="month" count="6"><mango:Archive>
-			<li><a href="<mango:ArchiveProperty link />"><mango:ArchiveProperty title dateformat="mmmm yyyy" /> (<mango:ArchiveProperty postcount />)</a></li>
-		</mango:Archive></mango:Archives>
-		</ul>
-	</mangox:TemplatePod>
-	
-<!--- all links by category --->
-	<mangox:TemplatePod id="links-by-category">
-		<mangox:LinkCategories>
-			<mangox:LinkCategory>
-			<li class="linkcat">
-			<h2><mangox:LinkCategoryProperty name /></h2>
-			</mangox:LinkCategory>
-				<ul>
-				<mangox:Links>
-				<mangox:Link>
-					<li><a href="<mangox:LinkProperty address />" title="<mangox:LinkProperty title />"><mangox:LinkProperty title /></a></li>
-				</mangox:Link>
-				</mangox:Links>
-				</ul>
-			</li>
-		</mangox:LinkCategories>
-	</mangox:TemplatePod>
-	
-	
-	<!--- output all the pods, including the ones added by plugins --->
-	<mangox:Pods>
-		<mangox:Pod>
-			<mangox:PodProperty ifHasTitle>
-			<li class="widget">
-				<h2><mangox:PodProperty title /></h2>
-				<mangox:PodProperty content />
-			</li>
-			</mangox:PodProperty>
-		</mangox:Pod>
-		<mangox:Pod><!--- output the content as is, good for "templatePods" --->
-			<mangox:PodProperty ifNotHasTitle>
-				<mangox:PodProperty content />
-			</mangox:PodProperty>
-		</mangox:Pod>
-	</mangox:Pods>
-		
-		
-		
-		<hr />
-		<!-- Comments -->
-		<h4>Recent Comments</h4>
-		php grey_last_comments(5, 50); 
-		<div class="clear"></div>
-		<hr />
-		<!-- Blogroll -->
-		<h4>Blogroll</h4>
-		<ul class="blogroll">php wp_list_bookmarks('categorize=0&title_li=');</ul>
-		<hr />
-		php endif; 
+		<mangox:TemplatePod id="categories" count="6">
+			<h4>Categories</h4>
+			<ul>
+				<mango:Categories>
+					<mango:Category>
+						<li class="cat-item cat-item-<mango:CategoryProperty id />">
+							<a href="<mango:CategoryProperty link />" title="View all posts filed under <mango:CategoryProperty title />"><mango:CategoryProperty title /></a>
+						</li>
+					</mango:Category>
+				</mango:Categories>
+			</ul>
+			<div class="clear"></div>
+			<hr />
+		</mangox:TemplatePod>
+		<!--- output all the pods, including the ones added by plugins --->
+		<mangox:Pods>
+			<mangox:Pod>
+				<mangox:PodProperty ifHasTitle>
+					<li class="widget">
+						<h2><mangox:PodProperty title /></h2>
+						<mangox:PodProperty content />
+					</li>
+				</mangox:PodProperty>
+			</mangox:Pod>
+			<mangox:Pod>
+				<!--- output the content as is, good for "templatePods" --->
+				<mangox:PodProperty ifNotHasTitle><mangox:PodProperty content /></mangox:PodProperty>
+			</mangox:Pod>
+		</mangox:Pods>
 	</aside>
 </cfif>

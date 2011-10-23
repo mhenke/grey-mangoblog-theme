@@ -20,7 +20,13 @@
 	<podLocations>
 		<location id="sidebar" name="General sidebar">
 			<!-- template pods defined in the skin -->
-			<pod id="twitterFollow">twitter Follow</pod>
+			<pod id="blog-description">Blog Description</pod>
+			<pod id="posts">Recent Entries</pod>
+			<pod id="categories">Categories</pod>
+			<pod id="search">Search</pod>
+			<pod id="category-cloud">Tag Cloud</pod>
+			<pod id="monthly-archives">Archives (monthly)</pod>
+			<pod id="links-by-category">Links by category</pod>
 		</location>
 		<location id="sidebar-page" name="Page Sidebar">
 			<pod id="page-menu">Page Navigation</pod>
