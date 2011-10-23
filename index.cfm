@@ -14,9 +14,9 @@
 					<mango:Posts count="10">
 						<mango:Post>
 							<article id="post-<mango:PostProperty id />"><template:article />
-							<p>
+							<!--- <p>
 								<img width="510" height="150" src="http://webexpedition18.com/grey/wp-content/uploads/2010/12/caffee-break-final-510x150.jpg" class="teasier wp-post-image" alt="caffee-break-final" title="caffee-break-final" />
-							</p>
+							</p> --->
 									<template:readmore />
 							</article>
 						</mango:Post>

@@ -21,9 +21,12 @@
 					readers 
 				</p> --->
 				<p class="rss_sub_links">
-					<a href="http://webexpedition18.com/grey/?feed=rss2">rss feed</a>
+					<b>Subscribe:</b>
+					<!--- <a href="http://webexpedition18.com/grey/?feed=rss2">rss feed</a> --->
+					<a href="/feeds/rss.cfm" title="Subscribe via RSS">RSS</a>
 					| 
-					<a href="http://feedburner.google.com/fb/a/mailverify?uri=webexpedition18com&amp;loc=en_US">email updates</a>
+					<!--- <a href="http://feedburner.google.com/fb/a/mailverify?uri=webexpedition18com&amp;loc=en_US">email updates</a> --->
+					<a href="http://itunes.apple.com/us/podcast/coldfusion-weekly/id135268416#" title="Subscribe via iTunes">iTunes</a>
 				</p>
 			</section>
 			<section id="twitter">
