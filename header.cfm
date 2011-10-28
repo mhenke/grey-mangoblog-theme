@@ -9,6 +9,7 @@
 	<header>
 		<div id="light">
 			<div class="container_16">
+				<h5>the</h5>
 				<h1 class="grid_8"><a href="<mango:Blog url />">
 						<mango:Blog title />
 					</a></h1>

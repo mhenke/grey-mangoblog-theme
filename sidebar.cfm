@@ -6,44 +6,36 @@
 <cfif thisTag.executionMode EQ "start">
 	<aside class="prefix_1 grid_5">
 		<!--- 
-		<!-- search -->
-		<form action="http://webexpedition18.com/grey" method="get"><input type="text" id="search" name="s" value="I'm searching for..." /></form>
-		<div class="clear"></div>
-		<hr /> 
-		--->
+			<!-- search -->
+			<form action="http://webexpedition18.com/grey" method="get"><input type="text" id="search" name="s" value="I'm searching for..." /></form>
+			<div class="clear"></div>
+			<hr /> 
+			--->
 		<!-- RSS / Twitter -->
 		<section id="rss">
-			<!--- <p>
-				<a href="http://webexpedition18.com/grey/?feed=rss2">
-				<img src="http://webexpedition18.com/grey/wp-content/themes/grey/images/socials/rss_32.png" alt="Subscribe Feed" />
-				</a>
-				</p>
-				<p>
-				<a href="http://webexpedition18.com/grey/?feed=rss2">SUBSCRIBE</a>
-				<br />
-				<strong>1528</strong>
-				readers 
-				</p> --->
+			<p>
+				<img src="<mango:Blog url />skins/grey/assets/images/socials/rss_32.png" alt="Subscribe Feed">
+			</p>
+			<p>
+				<a href="<mango:Blog rssurl />">SUBSCRIBE</a>
+				<br>
+				<!--- <strong>1538</strong> readers --->
+			</p>
 			<p class="rss_sub_links">
-				<b>Subscribe:</b>
-				<!--- <a href="http://webexpedition18.com/grey/?feed=rss2">rss feed</a> --->
-				<a href="/feeds/rss.cfm" title="Subscribe via RSS">RSS</a>
-				<!--- | --->
-				<!--- <a href="http://feedburner.google.com/fb/a/mailverify?uri=webexpedition18com&amp;loc=en_US">email updates</a> --->
-				<!--- <a href="http://itunes.apple.com/us/podcast/coldfusion-weekly/id135268416#" title="Subscribe via iTunes">iTunes</a> --->
+				<a href="<mango:Blog rssurl />">RSS</a>
+				&#124; 
+				<a href="http://itunes.apple.com/us/podcast/coldfusion-show/id475472078">iTunes</a>
 			</p>
 		</section>
 		<section id="twitter">
-			<!--- 			
-				<p>
-				<a href="http://twitter.com/colaja">
-				<img src="http://webexpedition18.com/grey/wp-content/themes/grey/images/socials/twitter_32.png" alt="Follow on Twitter" />
+			<p>
+				<a href="http://twitter.com/coldfusionshow">
+					<img src="<mango:Blog url />skins/grey/assets/images/socials/twitter_32.png" alt="Follow on Twitter" />
 				</a>
-				</p>
-				<p>
-				<a href="http://twitter.com/mikehenke" class="twitter-follow-button">FOLLOW ME</a>
-				</p> 
-				--->
+			</p>
+			<p>
+				<a href="http://twitter.com/coldfusionshow">FOLLOW US</a><br><br>
+			</p>
 			<p>
 				<a href="http://twitter.com/coldfusionshow" class="twitter-follow-button">Follow @coldfusionshow</a>
 				<script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script> 
